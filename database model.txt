@@ -1,0 +1,10 @@
+CREATE TABLE users(id INT NOT NULL PRIMARY KEY,firstname TEXT,lastname TEXT,
+username TEXT,password TEXT,dateAdded INTEGER,
+user_type TEXT);
+
+create table records(rid INT NOT NULL PRIMARY KEY,firstname TEXT,middlename TEXT,lastname TEXT,
+gender TEXT,DOB INTEGER, address TEXT, offDesc TEXT,
+offDate INTEGER,offLoc TEXT)
+
+create table pathRecords(pid INT NOT NULL PRIMARY KEY,path varchar(100), label integer,
+rid INTEGER NOT NULL REFERENCES records(rid))
